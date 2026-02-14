@@ -11,21 +11,21 @@ jobs:
       # Checkout code
       - name: Checkout code
         uses: actions/checkout@v6
-      # 安装 JDK 环境
-      - name: Install Java toolchain
-        uses: actions/setup-java@v3
-        with:
-          java-version: "21"
-          distribution: "temurin"
-      # 安装 Android 环境
-      - name: Install Android toolchain
-        uses: android-actions/setup-android@v3
-        with:
-          cmdline-tools-version: 9477386
-      # 安装 Python 环境
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.13"
+      # # 安装 JDK 环境
+      # - name: Install Java toolchain
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: "21"
+      #     distribution: "temurin"
+      # # 安装 Android 环境
+      # - name: Install Android toolchain
+      #   uses: android-actions/setup-android@v3
+      #   with:
+      #     cmdline-tools-version: 9477386
+      # # 安装 Python 环境
+      # - uses: actions/setup-python@v6
+      #   with:
+      #     python-version: "3.13"
       # 安装 Renpy 环境
       - name: Setup Ren'Py
         uses: remarkablegames/setup-renpy@v2
@@ -39,7 +39,7 @@ jobs:
           # renpy-launcher android_build . --destination ./build
       # 上传工件
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: android-build
           path: ./build
