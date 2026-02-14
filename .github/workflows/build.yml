@@ -41,7 +41,7 @@ jobs:
           renpy-launcher android_build --destination ./build
       # 上传工件
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: android-build
           path: ./build
