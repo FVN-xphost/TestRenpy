@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       # Checkout code
       - name: Checkout code
@@ -33,9 +33,11 @@ jobs:
         with:
           cli-version: 8.5.2
           rapt: true
+          launcher-name: renpy-launcher
       # 开始构建 Android
       - name: Run Build
         run: |
+          renpy-launcher
           renpy-launcher android_build --destination ./build
       # 上传工件
       - name: Upload Artifact
