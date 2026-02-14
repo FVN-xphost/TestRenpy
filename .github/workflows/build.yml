@@ -38,7 +38,7 @@ jobs:
       - name: Run Build
         run: |
           renpy-launcher
-          renpy-launcher android_build --destination ./build
+          renpy-launcher android_build . --destination ./build
       # 上传工件
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
