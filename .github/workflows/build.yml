@@ -11,7 +11,7 @@ jobs:
       # Checkout code
       - name: Checkout code
         uses: actions/checkout@v4
-      # 安装 JDK
+      # 安装 JDK 环境
       - name: Install Java toolchain
         uses: actions/setup-java@v3
         with:
@@ -22,13 +22,16 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 9477386
-      # 设置 Renpy 环境
+      # 安装 Python 环境
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      # 安装 Renpy 环境
       - name: Setup Ren'Py
         uses: remarkablegames/setup-renpy@v1
         with:
           cli-version: 8.5.2
           rapt: true
-          launcher-name: renpy-launcher
       # 开始构建 Android
       - name: Run Build
         run: |
