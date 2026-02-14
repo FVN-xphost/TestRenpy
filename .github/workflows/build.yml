@@ -1,0 +1,47 @@
+name: Build Renpy Project
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+      # 安装 JDK
+      - name: Install Java toolchain
+        if: ${{ matrix.platform == 'android' }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+      # 安装 Android 环境
+      - name: Install Android toolchain
+        if: ${{ matrix.platform == 'android' }}
+        uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 9477386
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "adopt"
+          java-version: "17"
+      # 设置 Renpy 环境
+      - name: Setup Ren'Py
+        uses: remarkablegames/setup-renpy@v1
+        with:
+          cli-version: 8.5.2
+          rapt: true
+      # 开始构建 Android
+      - name: Run Build
+        run: |
+          renpy-launcher android_build --destination ./build
+      # 上传工件
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-build
+          path: ./build
