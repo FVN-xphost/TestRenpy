@@ -15,7 +15,7 @@ jobs:
       - name: Install Java toolchain
         uses: actions/setup-java@v3
         with:
-          java-version: "17"
+          java-version: "21"
           distribution: "temurin"
       # 安装 Android 环境
       - name: Install Android toolchain
