@@ -13,14 +13,12 @@ jobs:
         uses: actions/checkout@v4
       # 安装 JDK
       - name: Install Java toolchain
-        if: ${{ matrix.platform == 'android' }}
         uses: actions/setup-java@v3
         with:
           java-version: "17"
           distribution: "temurin"
       # 安装 Android 环境
       - name: Install Android toolchain
-        if: ${{ matrix.platform == 'android' }}
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 9477386
