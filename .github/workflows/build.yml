@@ -10,7 +10,7 @@ jobs:
     steps:
       # Checkout code
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # 安装 JDK
       - name: Install Java toolchain
         if: ${{ matrix.platform == 'android' }}
