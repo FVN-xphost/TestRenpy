@@ -22,11 +22,6 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 9477386
-      - name: Setup Java
-        uses: actions/setup-java@v2
-        with:
-          distribution: "adopt"
-          java-version: "17"
       # 设置 Renpy 环境
       - name: Setup Ren'Py
         uses: remarkablegames/setup-renpy@v1
