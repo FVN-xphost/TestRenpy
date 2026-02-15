@@ -9,7 +9,7 @@
 3. 下载 [git](https://git-scm.com/downloads)
 4. 进入 [Actions build.yml](https://github.com/FVN-xphost/TestRenpy/blob/main/.github/workflows/build.yml)
 5. 复制所有内容到你当前目录下的 `.github/workflows/build.yml`
-6. 在视觉小说当前目录下打开终端，初次你需要初始化一下。随后输入以下指令（`user.email` 邮箱需要保证是你的 github 注册邮箱！！`user.name` 用户名无所谓。）：
+6. 在视觉小说当前目录下打开终端，初次你需要按照下列步骤初始化一下（如果你不是第一次推送仓库，请直接跳转到第 13 步）。随后输入以下指令（`user.email` 邮箱需要保证是你的 github 注册邮箱！！`user.name` 用户名无所谓。）：
 
 ```
 git config --global user.email "your_email@example.com"
