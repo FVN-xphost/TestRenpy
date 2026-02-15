@@ -7,7 +7,7 @@
 1. 注册一个 [github.com](https://github.com/) 账号
 2. 在 github 里新建一个仓库，默认名字随意。最终会变成以下网址：`https://github.com/你的用户名/你的仓库名`，（建议公开，因为私有仓库限制每个月 2000 分钟 actions 额度。。）
 3. 下载 [git](https://git-scm.com/downloads)
-4. 进入 [Actions build.yml](https://github.com/fvn-xphost/TestRenpy/blob/main/build/workflows/build.yml)
+4. 进入 [Actions build.yml](https://github.com/FVN-xphost/TestRenpy/blob/main/.github/workflows/build.yml)
 5. 复制所有内容到你当前目录下的 `.github/workflows/build.yml`
 6. 在视觉小说当前目录下打开终端，初次你需要初始化一下。随后输入以下指令（`user.email` 邮箱需要保证是你的 github 注册邮箱！！`user.name` 用户名无所谓。）：
 
